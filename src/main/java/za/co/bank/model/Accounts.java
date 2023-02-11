@@ -2,6 +2,9 @@ package za.co.bank.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class Accounts {
@@ -11,13 +14,18 @@ public class Accounts {
     private int balance;
     private String acctStatus;
 
+    @OneToMany
+    @JoinColumn(name = "accTypeID", referencedColumnName = "acctID")
+    private List<AccountType> accountType;
+
     public Accounts() {
     }
 
-    public Accounts(int acctID, int balance, String acctStatus) {
+    public Accounts(int acctID, int balance, String acctStatus, List<AccountType> accountType) {
         this.acctID = acctID;
         this.balance = balance;
         this.acctStatus = acctStatus;
+        this.accountType = accountType;
     }
 
     public int getAcctID() {
@@ -42,5 +50,13 @@ public class Accounts {
 
     public void setAcctStatus(String acctStatus) {
         this.acctStatus = acctStatus;
+    }
+
+    public List<AccountType> getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(List<AccountType> accountType) {
+        this.accountType = accountType;
     }
 }
