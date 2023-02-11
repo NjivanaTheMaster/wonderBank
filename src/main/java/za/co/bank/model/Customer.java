@@ -2,6 +2,9 @@ package za.co.bank.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity // The object will be persisted
 public class Customer {
@@ -17,10 +20,15 @@ public class Customer {
     private int phoneNo;
     private String password;
 
+    @OneToMany
+    @JoinColumn(name = "accTypeID", referencedColumnName = "acctID")
+    private List<AccountType> accountType;
+
     public Customer(){}
 
     public Customer(int accID, String customerName, String customerSurname,
-                    String city, String province, String country, int phoneNo, String password) {
+                    String city, String province, String country, int phoneNo,
+                    String password, List<AccountType> accountType) {
         this.accID = accID;
         this.customerName = customerName;
         this.customerSurname = customerSurname;
@@ -29,6 +37,7 @@ public class Customer {
         this.country = country;
         this.phoneNo = phoneNo;
         this.password = password;
+        this.accountType = accountType;
     }
 
     public int getAccID() {
@@ -93,5 +102,13 @@ public class Customer {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<AccountType> getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(List<AccountType> accountType) {
+        this.accountType = accountType;
     }
 }

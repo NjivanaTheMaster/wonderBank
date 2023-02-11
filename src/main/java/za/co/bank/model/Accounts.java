@@ -14,9 +14,7 @@ public class Accounts {
     private int balance;
     private String acctStatus;
 
-    @OneToMany
-    @JoinColumn(name = "accTypeID", referencedColumnName = "acctID")
-    private List<AccountType> accountType;
+
 
     public Accounts() {
     }
@@ -25,7 +23,6 @@ public class Accounts {
         this.acctID = acctID;
         this.balance = balance;
         this.acctStatus = acctStatus;
-        this.accountType = accountType;
     }
 
     public int getAcctID() {
@@ -52,11 +49,4 @@ public class Accounts {
         this.acctStatus = acctStatus;
     }
 
-    public List<AccountType> getAccountType() {
-        return accountType;
-    }
-
-    public void setAccountType(List<AccountType> accountType) {
-        this.accountType = accountType;
-    }
 }
