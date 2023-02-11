@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b88b267c-5e3b-41b3-b8b3-cea4ab7f59b3" name="Changes" comment="Added dependencies&#10;Added application properties file&#10;Added model component">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/model/AccountType.java" afterDir="false" />
+    <list default="true" id="b88b267c-5e3b-41b3-b8b3-cea4ab7f59b3" name="Changes" comment="Added dependencies&#10;Added AccountType entity">
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/dao/AccountsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/dao/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/dao/LoggerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/bank/model/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/model/Accounts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -57,7 +59,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676138133717</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added dependencies&#10;Added AccountType entity">
+      <created>1676141145757</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676141145757</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,6 +82,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added dependencies&#10;Added application properties file&#10;Added model component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added dependencies&#10;Added application properties file&#10;Added model component" />
+    <MESSAGE value="Added dependencies&#10;Added AccountType entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added dependencies&#10;Added AccountType entity" />
   </component>
 </project>
