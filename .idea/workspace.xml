@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b88b267c-5e3b-41b3-b8b3-cea4ab7f59b3" name="Changes" comment="Added updated packages">
-      <change afterPath="$PROJECT_DIR$/Utility/wonderBank-1.0-SNAPSHOT.jar" afterDir="false" />
+    <list default="true" id="b88b267c-5e3b-41b3-b8b3-cea4ab7f59b3" name="Changes" comment="Added jar file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utility/READme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/READme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utility/UserAuthRequestUri.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/UserAuthRequestUri.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/work/wonderBank/Utility",
+    "last_opened_file_path": "C:/work",
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
@@ -154,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676304590294</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added jar file">
+      <created>1676308138401</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676308138401</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +191,7 @@
     <MESSAGE value="Added authentication controller with signin and signup methods" />
     <MESSAGE value="Added updated password" />
     <MESSAGE value="Added updated packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added updated packages" />
+    <MESSAGE value="Added jar file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added jar file" />
   </component>
 </project>

@@ -23,25 +23,26 @@ POST
 /customer
 {
     "custID": "1",
-	"customerName": "Ankit",
-	"customerSurname": "Ankit",
-	"city": "Binghamton",
-	"province": "NY",0
-	"country": "US",
-	"phoneNo": "1234",
-	"password": "ankit123"
+	"customerName": "njabulo",
+	"customerSurname": "lukhele",
+	"city": "pretoria",
+	"province": "gauteng",
+	"country": "SA",
+	"phoneNo": "0682259393",
+	"password": "Mama89"
 }
 
 POST
 /customer
 {
-     "acctID": "2",
-	"custName": "Akshay",
-	"city": "Nashville",
-	"state": "TN",
-	"country": "US",
-	"phoneNo": "12345",
-	"password": "akshay123"
+        "custID": "2",
+     	"customerName": "njabzen",
+     	"customerSurname": "lukh",
+     	"city": "warden",
+     	"province": "free state",
+     	"country": "SA",
+     	"phoneNo": "0675847758",
+     	"password": "test23"
 }
 
 DELETE

@@ -14,10 +14,10 @@ Developed a sign-in and sign-up REST API using:
 * MySQL database
 
 Instructions:
-The repo consists of an Extras folder. It has an executable jar file(BankApp-0.0.1-SNAPSHOT.jar) and a file containing Request URI's. You can use URI's to construct API requests using an app like Postman.
+The repo consists of a Utility folder. It has an executable jar file(wonderBank-1.0-SNAPSHOT.jar),README and a file containing Request URI's. You can use URI's to construct API requests using an app like Postman.
 
 Steps to run the API:
-In order to run the API, Java should be installed (https://www.youtube.com/watch?v=f7rT0h1Q5Wo).
+In order to run the API, Java should be installed.
 Double click "WonderBankApp-0.0.1-SNAPSHOT.jar".
 Download link for Postman -> https://www.getpostman.com/downloads/
 Open Postman and send requests.
