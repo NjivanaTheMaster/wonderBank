@@ -4,14 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import java.util.List;
 
 @Entity // The object will be persisted
 public class Customer {
 
     @Id // primary key rep in db
-    private int accID;
-
+    private int custID;
     private String customerName;
     private String customerSurname;
     private String city;
@@ -21,15 +19,15 @@ public class Customer {
     private String password;
 
     @OneToMany
-    @JoinColumn(name = "accTypeID", referencedColumnName = "acctID")
-    private List<AccountType> accountType;
+    @JoinColumn(name = "custID", referencedColumnName = "acctID")
+    private Accounts accounts;
 
     public Customer(){}
 
     public Customer(int accID, String customerName, String customerSurname,
                     String city, String province, String country, int phoneNo,
-                    String password, List<AccountType> accountType) {
-        this.accID = accID;
+                    String password, Accounts accounts) {
+        this.custID = accID;
         this.customerName = customerName;
         this.customerSurname = customerSurname;
         this.city = city;
@@ -37,15 +35,15 @@ public class Customer {
         this.country = country;
         this.phoneNo = phoneNo;
         this.password = password;
-        this.accountType = accountType;
+        this.accounts = accounts;
     }
 
-    public int getAccID() {
-        return accID;
+    public int getCustID() {
+        return custID;
     }
 
-    public void setAccID(int accID) {
-        this.accID = accID;
+    public void setCustID(int custID) {
+        this.custID = custID;
     }
 
     public String getCustomerName() {
@@ -104,11 +102,11 @@ public class Customer {
         this.password = password;
     }
 
-    public List<AccountType> getAccountType() {
-        return accountType;
+    public Accounts getAccounts() {
+        return accounts;
     }
 
-    public void setAccountType(List<AccountType> accountType) {
-        this.accountType = accountType;
+    public void setAccounts(Accounts accounts) {
+        this.accounts = accounts;
     }
 }

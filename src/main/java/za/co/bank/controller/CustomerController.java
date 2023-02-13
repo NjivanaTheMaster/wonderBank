@@ -15,8 +15,18 @@ public class CustomerController {
 
     @PostMapping("/customer")
     public void createCustomer(@RequestBody Customer customer) {
-        customerService.createCustomer(customer);
-        accountController.createAccount(customer.getAccID(), 0, "Active",customer.getAccountType());
+        if(customer != null) {
+            customerService.createCustomer(customer);
+            if(customer.getAccounts().getAccountType().getAccountName() == "SAVINGS"){
+                if(customer.getAccounts().getBalance() >= 1000){
+                    // Saving account set overdraftLimit to zero
+                    customer.getAccounts().setOverdraftLimit(0);
+                    accountController.createAccount(customer.getCustID(), customer.getAccounts().getBalance(), "Active",customer.getAccounts().getOverdraftLimit(),customer.getAccounts().getAccountType());
+                }
+            }else{ // this is a CURRENT account
+                accountController.createAccount(customer.getCustID(), customer.getAccounts().getBalance(), "Active",customer.getAccounts().getOverdraftLimit(), customer.getAccounts().getAccountType());
+            }
+        }
     }
 
     @GetMapping("/customer/{acctID}")

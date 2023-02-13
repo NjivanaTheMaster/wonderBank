@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import java.util.List;
 
 @Entity
 public class Accounts {
@@ -13,16 +12,22 @@ public class Accounts {
     private int acctID;
     private int balance;
     private String acctStatus;
+    private int overdraftLimit;
 
+    @OneToMany
+    @JoinColumn(name = "accTypeID", referencedColumnName = "acctID")
+    private AccountType accountType;
 
 
     public Accounts() {
     }
 
-    public Accounts(int acctID, int balance, String acctStatus, List<AccountType> accountType) {
+    public Accounts(int acctID, int balance, String acctStatus,int overdraft, AccountType accountType) {
         this.acctID = acctID;
         this.balance = balance;
         this.acctStatus = acctStatus;
+        this.accountType = accountType;
+        this.overdraftLimit = overdraft;
     }
 
     public int getAcctID() {
@@ -49,4 +54,19 @@ public class Accounts {
         this.acctStatus = acctStatus;
     }
 
+    public AccountType getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(AccountType accountType) {
+        this.accountType = accountType;
+    }
+
+    public int getOverdraftLimit() {
+        return overdraftLimit;
+    }
+
+    public void setOverdraftLimit(int overdraftLimit) {
+        this.overdraftLimit = overdraftLimit;
+    }
 }

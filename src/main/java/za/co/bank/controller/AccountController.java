@@ -18,8 +18,8 @@ public class AccountController {
     private LoggerController loggerController;
 
     // createAccount happens upon createCustomer
-    public void createAccount(int acctID, int balance, String acctStatus, List<AccountType> accountType) {
-        Accounts acct = new Accounts(acctID, balance, acctStatus, accountType);
+    public void createAccount(int acctID, int balance, String acctStatus,int overdraftLimit, AccountType accountType) {
+        Accounts acct = new Accounts(acctID, balance, acctStatus, overdraftLimit, accountType);
         accountService.createAccount(acct);
     }
 
@@ -42,9 +42,42 @@ public class AccountController {
     @PutMapping("/account/{acctID}/withdraw/{amount}")
     public void withdrawAmount(@PathVariable int acctID, @PathVariable int amount) {
         int initBal = getBalance(acctID);
-        accountService.withdrawAmount(acctID, amount);
-        Logger logger = new Logger(acctID, "Withdrawn", "Success", initBal, initBal - amount);
-        loggerController.addLog(logger);
+        Accounts accounts = accountService.getAccountInfo(acctID);
+        if(accounts.getAccountType().getAccountName() == "SAVINGS"){
+            if(initBal >= 1000) {
+                accountService.withdrawAmount(acctID, amount);
+                Logger logger = new Logger(acctID, "Withdrawn", "Success", initBal, initBal - amount);
+                loggerController.addLog(logger);
+            }else{
+                Logger logger = new Logger(acctID, "Withdrawn", "insufficient funds", initBal, initBal);
+                loggerController.addLog(logger);
+            }
+        }else{ // This is a CURRENT account
+            if(accounts.getOverdraftLimit() == 100000){ // There is an overdraftLimit set on the account
+                int withdrawalAmount = initBal+accounts.getOverdraftLimit();
+                if(amount > withdrawalAmount){
+                    Logger logger = new Logger(acctID, "Withdrawn", "amount requested is more than the balance", initBal, withdrawalAmount);
+                    loggerController.addLog(logger);
+                }else{
+                    // check if the initial balance is 0
+                    if(initBal == 0){
+                        // withdrawal will be made from the overdraftLimit amount
+                        accountService.withdrawAmountFromOverdraft(acctID, amount);
+                        Logger logger = new Logger(acctID, "Withdrawn", "Success", initBal, accounts.getOverdraftLimit() - amount);
+                        loggerController.addLog(logger);
+                    }else{
+                        // he still has money, we subtract from balance
+                        accountService.withdrawAmount(acctID, amount);
+                        Logger logger = new Logger(acctID, "Withdrawn", "Success", initBal, initBal - amount);
+                        loggerController.addLog(logger);
+                    }
+                }
+            }else{ // No overdraft limit set
+                accountService.withdrawAmount(acctID, amount);
+                Logger logger = new Logger(acctID, "Withdrawn", "Success", initBal, initBal - amount);
+                loggerController.addLog(logger);
+            }
+        }
     }
 
     // transferAmount

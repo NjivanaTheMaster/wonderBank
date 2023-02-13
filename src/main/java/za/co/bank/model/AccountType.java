@@ -8,14 +8,14 @@ public class AccountType {
 
     @Id
     private int accTypeID;
-    private String accountType;
+    private String accountName;
 
     public AccountType() {
     }
 
     public AccountType(int accTypeID, String accountType) {
         this.accTypeID = accTypeID;
-        this.accountType = accountType;
+        this.accountName = accountType;
     }
 
     public int getAccTypeID() {
@@ -26,11 +26,11 @@ public class AccountType {
         this.accTypeID = accTypeID;
     }
 
-    public String getAccountType() {
-        return accountType;
+    public String getAccountName() {
+        return accountName;
     }
 
-    public void setAccountType(String accountType) {
-        this.accountType = accountType;
+    public void setAccountName(String accountName) {
+        this.accountName = accountName;
     }
 }

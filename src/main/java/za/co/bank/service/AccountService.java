@@ -34,6 +34,9 @@ public class AccountService {
     public void withdrawAmount(int acctID, int amount) {
         accountsRepository.withdrawAmountByAcctID(acctID, amount);
     }
+    public void withdrawAmountFromOverdraft(int acctID, int amount) {
+        accountsRepository.withdrawOverdraftAmountByAcctID(acctID, amount);
+    }
 
     public void transferAmount(int acctID, int destAcctID, int amount) {
         accountsRepository.withdrawAmountByAcctID(acctID, amount);

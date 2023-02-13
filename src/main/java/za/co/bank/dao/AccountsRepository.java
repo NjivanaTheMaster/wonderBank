@@ -31,6 +31,11 @@ public interface AccountsRepository extends CrudRepository<Accounts, Integer>, J
 
     @Transactional
     @Modifying(clearAutomatically = true)
+    @Query("update Accounts set overdraftLimit = overdraftLimit-?2 where acctID=?1")
+    public void withdrawOverdraftAmountByAcctID(int acctID, int amount);
+
+    @Transactional
+    @Modifying(clearAutomatically = true)
     @Query("update Accounts set balance = balance+?2 where acctID=?1")
     public void transferAmountByAcctID(int acctID, int amount);
 }
