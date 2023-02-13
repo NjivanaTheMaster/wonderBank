@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b88b267c-5e3b-41b3-b8b3-cea4ab7f59b3" name="Changes" comment="Added API security dependency">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/model/User.java" afterDir="false" />
+    <list default="true" id="b88b267c-5e3b-41b3-b8b3-cea4ab7f59b3" name="Changes" comment="Added JPA Model for user and role">
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/dao/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/dao/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -101,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676293970643</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added JPA Model for user and role">
+      <created>1676295291107</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676295291107</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +130,7 @@
     <MESSAGE value="Added controller for customer, accounts,logger" />
     <MESSAGE value="Added logic for the account types&#10;updated relationships" />
     <MESSAGE value="Added API security dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added API security dependency" />
+    <MESSAGE value="Added JPA Model for user and role" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added JPA Model for user and role" />
   </component>
 </project>
