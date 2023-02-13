@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b88b267c-5e3b-41b3-b8b3-cea4ab7f59b3" name="Changes" comment="Added logic for the account types&#10;updated relationships">
+    <list default="true" id="b88b267c-5e3b-41b3-b8b3-cea4ab7f59b3" name="Changes" comment="Added API security dependency">
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676291612334</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added API security dependency">
+      <created>1676293970643</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676293970643</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,6 +122,7 @@
     <MESSAGE value="Added services for customer, accounts,logger" />
     <MESSAGE value="Added controller for customer, accounts,logger" />
     <MESSAGE value="Added logic for the account types&#10;updated relationships" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added logic for the account types&#10;updated relationships" />
+    <MESSAGE value="Added API security dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added API security dependency" />
   </component>
 </project>
