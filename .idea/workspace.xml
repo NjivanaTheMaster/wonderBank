@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b88b267c-5e3b-41b3-b8b3-cea4ab7f59b3" name="Changes" comment="Added security configuration layers">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/dto/LoginDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/dto/SignUpDto.java" afterDir="false" />
+    <list default="true" id="b88b267c-5e3b-41b3-b8b3-cea4ab7f59b3" name="Changes" comment="Added payload classes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676298580380</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added payload classes">
+      <created>1676298875625</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676298875625</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +153,7 @@
     <MESSAGE value="Added JPA Model for user and role" />
     <MESSAGE value="Added dao repository layer for user and role" />
     <MESSAGE value="Added security configuration layers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added security configuration layers" />
+    <MESSAGE value="Added payload classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added payload classes" />
   </component>
 </project>
