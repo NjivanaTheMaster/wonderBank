@@ -1,6 +1,7 @@
 package za.co.bank.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.util.Set;
 
 @Entity

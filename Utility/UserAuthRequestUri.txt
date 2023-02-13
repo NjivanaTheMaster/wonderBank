@@ -1,0 +1,60 @@
+Use Postman or similar app to construct and send requests
+
+http://localhost:8080/api/auth/signup
+POST
+/
+{
+ "name":"njabulo",
+ "username":"njivana",
+ "email":"njabulo@gmail.com",
+ "password":"njabu123"
+}
+
+http://localhost:8080/api/auth/signin
+POST
+/
+{
+ "usernameOrEmail":"njivana",
+ "password":"njabu123"
+}
+
+
+POST
+/customer
+{
+    "custID": "1",
+	"customerName": "Ankit",
+	"customerSurname": "Ankit",
+	"city": "Binghamton",
+	"province": "NY",0
+	"country": "US",
+	"phoneNo": "1234",
+	"password": "ankit123"
+}
+
+POST
+/customer
+{
+     "acctID": "2",
+	"custName": "Akshay",
+	"city": "Nashville",
+	"state": "TN",
+	"country": "US",
+	"phoneNo": "12345",
+	"password": "akshay123"
+}
+
+DELETE
+/customer/{acctID}
+/account/{acctID}
+
+GET
+/customer/{acctID}
+/account/{acctID}/balance
+/account/{acctID}
+/account/{acctID}/logs
+
+PUT
+/account/{acctID}/deposit/{amount}
+/account/{acctID}/withdraw/{amount}
+/account/{acctID}/transfer/{destAcctID}/{amount}
