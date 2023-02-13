@@ -44,6 +44,7 @@ public class AuthController {
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
         return new ResponseEntity<>("User signed-in successfully!.", HttpStatus.OK);
+        // http://localhost:8080/api/auth/signup
     }
 
     @PostMapping("/signup")
@@ -72,6 +73,7 @@ public class AuthController {
         userRepository.save(user);
 
         return new ResponseEntity<>("User registered successfully", HttpStatus.OK);
+        // http://localhost:8080/api/auth/signin
 
     }
 }

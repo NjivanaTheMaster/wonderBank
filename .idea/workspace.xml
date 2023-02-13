@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b88b267c-5e3b-41b3-b8b3-cea4ab7f59b3" name="Changes" comment="Added payload classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/controller/AuthController.java" afterDir="false" />
+    <list default="true" id="b88b267c-5e3b-41b3-b8b3-cea4ab7f59b3" name="Changes" comment="Added authentication controller with signin and signup methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/bank/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/bank/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676298875625</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added authentication controller with signin and signup methods">
+      <created>1676299423441</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676299423441</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +162,7 @@
     <MESSAGE value="Added dao repository layer for user and role" />
     <MESSAGE value="Added security configuration layers" />
     <MESSAGE value="Added payload classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added payload classes" />
+    <MESSAGE value="Added authentication controller with signin and signup methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added authentication controller with signin and signup methods" />
   </component>
 </project>
